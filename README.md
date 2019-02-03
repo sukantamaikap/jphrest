@@ -1,4 +1,4 @@
-# jsonplaceholder-framework:
+# JasonPlaceholder test automated with RestAssured:
 A [testng](https://testng.org/doc/index.html) and [rest-assured](http://rest-assured.io/) based api testing framework built around [jsonplaceholder](https://jsonplaceholder.typicode.com/)
 
 ### Coding style:
@@ -14,4 +14,3 @@ Mostly for personal reference, this can be used by anyone to kick-start any API 
 ### How to run :
 details coming soon
 
-# JasonPlaceholder test automated with RestAssured
