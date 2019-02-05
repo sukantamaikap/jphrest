@@ -2,7 +2,10 @@ package com.personal.jsonplaceholder.framework.pojo.object;
 
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+/**
+ * POJO of User
+ */
+public final class User {
     @SerializedName("id")
     private int id;
 
@@ -30,62 +33,69 @@ public class User {
         return id;
     }
 
-    public void setId(int id) {
+    public User setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public User setName(String name) {
         this.name = name;
+        return this;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    public User setEmail(String email) {
         this.email = email;
+        return this;
     }
 
     public Address getAddress() {
         return address;
     }
 
-    public void setAddress(Address address) {
+    public User setAddress(Address address) {
         this.address = address;
+        return this;
     }
 
     public String getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public User setPhone(String phone) {
         this.phone = phone;
+        return this;
     }
 
     public String getWebsite() {
         return website;
     }
 
-    public void setWebsite(String website) {
+    public User setWebsite(String website) {
         this.website = website;
+        return this;
     }
 
     public Company getCompany() {
         return company;
     }
 
-    public void setCompany(Company company) {
+    public User setCompany(Company company) {
         this.company = company;
+        return this;
     }
 
     /**
      * Represents the address of an user
      */
-    public class Address {
+    public static class Address {
         @SerializedName("street")
         private String street;
 
@@ -96,7 +106,7 @@ public class User {
         private String city;
 
         @SerializedName("zipcode")
-        private String zipcode;
+        private int zipcode;
 
         @SerializedName("geo")
         private Geo geo;
@@ -107,48 +117,52 @@ public class User {
             return street;
         }
 
-        public void setStreet(String street) {
+        public Address setStreet(String street) {
             this.street = street;
+            return this;
         }
 
         public String getSuite() {
             return suite;
         }
 
-        public void setSuite(String suite) {
+        public Address setSuite(String suite) {
             this.suite = suite;
+            return this;
         }
 
         public String getCity() {
             return city;
         }
 
-        public void setCity(String city) {
+        public Address setCity(String city) {
             this.city = city;
+            return this;
         }
 
-        public String getZipcode() {
+        public int getZipcode() {
             return zipcode;
         }
 
-        public void setZipcode(String zipcode) {
+        public Address setZipcode(final int zipcode) {
             this.zipcode = zipcode;
+            return this;
         }
 
         public Geo getGeo() {
             return geo;
         }
 
-        public void setGeo(Geo geo) {
+        public Address setGeo(Geo geo) {
             this.geo = geo;
+            return this;
         }
     }
-
 
     /**
      * Represents the latitude and longitude of an user
      */
-    public class Geo {
+    public static class Geo {
         @SerializedName("lng")
         private String lng;
 
@@ -161,23 +175,25 @@ public class User {
             return lng;
         }
 
-        public void setLng(String lng) {
+        public Geo setLng(String lng) {
             this.lng = lng;
+            return this;
         }
 
         public String getLat() {
             return lat;
         }
 
-        public void setLat(String lat) {
+        public Geo setLat(String lat) {
             this.lat = lat;
+            return this;
         }
     }
 
     /**
      * Represents a company
      */
-    public class Company {
+    public static class Company {
         @SerializedName("name")
         private String name;
 
@@ -193,24 +209,27 @@ public class User {
             return name;
         }
 
-        public void setName(String name) {
+        public Company setName(String name) {
             this.name = name;
+            return this;
         }
 
         public String getCatchPhrase() {
             return catchPhrase;
         }
 
-        public void setCatchPhrase(String catchPhrase) {
+        public Company setCatchPhrase(String catchPhrase) {
             this.catchPhrase = catchPhrase;
+            return this;
         }
 
         public String getBs() {
             return bs;
         }
 
-        public void setBs(String bs) {
+        public Company setBs(String bs) {
             this.bs = bs;
+            return this;
         }
     }
 }
