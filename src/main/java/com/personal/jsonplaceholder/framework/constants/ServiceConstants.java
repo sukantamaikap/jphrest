@@ -6,6 +6,7 @@ public final class ServiceConstants {
   }
 
   public static final class RestResources {
+
     private RestResources() {
     }
 
@@ -13,5 +14,7 @@ public final class ServiceConstants {
     public static final String POST_ID = "/posts/%s";
     public static final String COMMENTS = "/comments";
     public static final String COMMENT_ID = "/comment/%s";
+    public static final String USER = "/users";
+    public static final String USER_ID = "/users/%s";
   }
 }

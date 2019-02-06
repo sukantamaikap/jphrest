@@ -9,7 +9,7 @@ public final class User {
     @SerializedName("id")
     private int id;
 
-    @SerializedName("id")
+    @SerializedName("name")
     private String name;
 
     @SerializedName("email")

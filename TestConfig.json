@@ -3,9 +3,6 @@
   "instance": "web",
   "server": {
     "protocol": "https",
-    "host": "jsonplaceholder.typicode.com",
-    "ports": [
-      9001
-    ]
+    "host": "jsonplaceholder.typicode.com"
   }
 }

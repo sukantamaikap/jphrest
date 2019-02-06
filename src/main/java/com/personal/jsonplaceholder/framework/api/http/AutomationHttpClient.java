@@ -13,9 +13,9 @@ public class AutomationHttpClient {
 
   private static final Logger LOG = LoggerFactory.getLogger(AutomationHttpClient.class);
 
-  public final synchronized Response postRequest(String url) {
+  public final synchronized Response postRequest(String url, final String jsonBody) {
     LOG.info("end point to be be executed : {}", url);
-    return given().when().post(url);
+    return given().contentType(ContentType.JSON).body(jsonBody).when().post(url).andReturn();
   }
 
   public final synchronized Response getRequest(final String uri,
