@@ -2,6 +2,8 @@ package com.personal.jsonplaceholder.framework.pojo.object;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Objects;
+
 /**
  * POJO of User
  */
@@ -157,6 +159,23 @@ public final class User {
             this.geo = geo;
             return this;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Address)) return false;
+            Address address = (Address) o;
+            return getZipcode() == address.getZipcode() &&
+                    Objects.equals(getStreet(), address.getStreet()) &&
+                    Objects.equals(getSuite(), address.getSuite()) &&
+                    Objects.equals(getCity(), address.getCity()) &&
+                    Objects.equals(getGeo(), address.getGeo());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(getStreet(), getSuite(), getCity(), getZipcode(), getGeo());
+        }
     }
 
     /**
@@ -187,6 +206,20 @@ public final class User {
         public Geo setLat(String lat) {
             this.lat = lat;
             return this;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Geo)) return false;
+            Geo geo = (Geo) o;
+            return getLng().equals(geo.getLng()) &&
+                    getLat().equals(geo.getLat());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(getLng(), getLat());
         }
     }
 
@@ -231,5 +264,38 @@ public final class User {
             this.bs = bs;
             return this;
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (!(o instanceof Company)) return false;
+            Company company = (Company) o;
+            return getName().equals(company.getName()) &&
+                    getCatchPhrase().equals(company.getCatchPhrase()) &&
+                    getBs().equals(company.getBs());
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(getName(), getCatchPhrase(), getBs());
+        }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final User user = (User) o;
+        return Objects.equals(getName(), user.getName()) &&
+                Objects.equals(getEmail(), user.getEmail()) &&
+                Objects.equals(getAddress(), user.getAddress()) &&
+                Objects.equals(getPhone(), user.getPhone()) &&
+                Objects.equals(getWebsite(), user.getWebsite()) &&
+                Objects.equals(getCompany(), user.getCompany());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getName(), getEmail(), getAddress(), getPhone(), getWebsite(), getCompany());
     }
 }

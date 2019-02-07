@@ -18,11 +18,13 @@ public class UserHelper extends JsonPlaceHolderHelper {
         this.userAPIHandler = new UserAPIHandler();
     }
 
-    public void createUser(final User user) {
+    public Response createUser(final User user) {
         final String createUserUri = this.getBaseUrl() + ServiceConstants.RestResources.USER;
-        LOG.info("URI for create user : %s", createUserUri);
+        LOG.info("URI for create user : {}", createUserUri);
 
         final Response response = this.userAPIHandler.createUser(createUserUri, user);
         Assert.assertEquals(response.getStatusCode(), 201, "Create user request was not successful");
+
+        return response;
     }
 }
