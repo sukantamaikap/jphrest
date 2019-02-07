@@ -8,15 +8,15 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 public class UserValidator extends BaseValidator {
-    private static final Logger LOG = LoggerFactory.getLogger(UserValidator.class);
 
-    public UserValidator() {}
+  private static final Logger LOG = LoggerFactory.getLogger(UserValidator.class);
 
-    public void validateUser(final User pojo, final Response response) {
-        LOG.info("validate user with parameters set");
-        final User responseUser = response.getBody().as(User.class);
-        Assert.assertTrue(responseUser.equals(pojo), "Response object does not match!!");
+  public UserValidator() {
+  }
 
-        pojo.setId(responseUser.getId());
-    }
+  public void validateUser(final User pojo, final Response response) {
+    LOG.info("validate user with parameters set");
+    final User responseUser = response.getBody().as(User.class);
+    Assert.assertTrue(responseUser.equals(pojo), "Created user does not match pojo!!");
+  }
 }

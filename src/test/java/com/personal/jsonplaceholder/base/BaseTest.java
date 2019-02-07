@@ -2,11 +2,10 @@ package com.personal.jsonplaceholder.base;
 
 import com.personal.jsonplaceholder.framework.factory.JsonPlaceHolderHelperFactory;
 import com.personal.jsonplaceholder.framework.testconfig.parser.TestConfigParser;
+import java.net.URISyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.BeforeSuite;
-
-import java.net.URISyntaxException;
 
 public class BaseTest extends AbstractTest {
 

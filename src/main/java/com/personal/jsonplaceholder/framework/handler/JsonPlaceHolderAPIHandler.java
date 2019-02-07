@@ -4,14 +4,15 @@ import com.personal.jsonplaceholder.framework.api.http.AutomationHttpClient;
 import com.personal.jsonplaceholder.framework.base.BaseAPIHelper;
 
 public class JsonPlaceHolderAPIHandler extends BaseAPIHelper {
-    private AutomationHttpClient automationHttpClient;
 
-    public JsonPlaceHolderAPIHandler() {
-        this.automationHttpClient = new AutomationHttpClient();
-    }
+  private AutomationHttpClient automationHttpClient;
 
-    @Override
-    protected AutomationHttpClient getAutomationHttpClient() {
-        return this.automationHttpClient;
-    }
+  public JsonPlaceHolderAPIHandler() {
+    this.automationHttpClient = new AutomationHttpClient();
+  }
+
+  @Override
+  protected AutomationHttpClient getAutomationHttpClient() {
+    return this.automationHttpClient;
+  }
 }

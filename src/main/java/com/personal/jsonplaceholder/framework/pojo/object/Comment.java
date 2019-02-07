@@ -7,60 +7,61 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Comment {
 
-    @SerializedName("PostID")
-    private int postId;
+  @SerializedName("PostID")
+  private int postId;
 
-    @SerializedName("Id")
-    private int id;
+  @SerializedName("Id")
+  private int id;
 
-    @SerializedName("Name")
-    private String name;
+  @SerializedName("Name")
+  private String name;
 
-    @SerializedName("Email")
-    private String email;
+  @SerializedName("Email")
+  private String email;
 
-    @SerializedName("Body")
-    private String body;
+  @SerializedName("Body")
+  private String body;
 
-    public Comment() {}
+  public Comment() {
+  }
 
-    public int getPostId() {
-        return postId;
-    }
+  public int getPostId() {
+    return postId;
+  }
 
-    public void setPostId(int postId) {
-        this.postId = postId;
-    }
+  public void setPostId(int postId) {
+    this.postId = postId;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getEmail() {
-        return email;
-    }
+  public String getEmail() {
+    return email;
+  }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+  public void setEmail(String email) {
+    this.email = email;
+  }
 
-    public String getBody() {
-        return body;
-    }
+  public String getBody() {
+    return body;
+  }
 
-    public void setBody(String body) {
-        this.body = body;
-    }
+  public void setBody(String body) {
+    this.body = body;
+  }
 }

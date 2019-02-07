@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class JsonPlaceHolderHelper extends BaseHelper {
+
   private static final Logger LOG = LoggerFactory.getLogger(JsonPlaceHolderHelper.class);
 
   private JsonPlaceHolderAPIHandler apiUtil;
@@ -23,11 +24,11 @@ public class JsonPlaceHolderHelper extends BaseHelper {
     LOG.info("construct base url from \"TestConfig.json\"");
     if (this.server.getPorts() == null) {
       this.baseUrl =
-              this.buildBaseURI(this.server.getProtocol(), this.server.getHost());
+          this.buildBaseURI(this.server.getProtocol(), this.server.getHost());
     } else {
       this.baseUrl =
-              this.buildBaseURI(
-                      this.server.getProtocol(), this.server.getHost(), this.server.getPorts()[0]);
+          this.buildBaseURI(
+              this.server.getProtocol(), this.server.getHost(), this.server.getPorts()[0]);
     }
 
     LOG.info("base url found {}", this.baseUrl);
