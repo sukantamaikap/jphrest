@@ -35,4 +35,8 @@ public class UserTests extends BaseTest {
     this.userValidator.validateUser(user, createUserResponse);
   }
 
+  public void testUpdateUser() {
+
+  }
+
 }
