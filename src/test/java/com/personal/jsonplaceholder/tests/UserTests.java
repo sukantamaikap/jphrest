@@ -4,35 +4,39 @@ import com.personal.jsonplaceholder.base.BaseTest;
 import com.personal.jsonplaceholder.framework.helper.UserHelper;
 import com.personal.jsonplaceholder.framework.pojo.builder.UserBuilder;
 import com.personal.jsonplaceholder.framework.pojo.object.User;
+import com.personal.jsonplaceholder.framework.validator.UserValidator;
+import io.restassured.response.Response;
 import java.net.URISyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-/**
- * Tests all functionality of comments for jsonplaceholder
- */
-public class CommentTests extends BaseTest {
+public class UserTests extends BaseTest {
 
-  private static final Logger LOG = LoggerFactory.getLogger(CommentTests.class);
+  private static final Logger LOG = LoggerFactory.getLogger(UserTests.class);
 
   private UserBuilder userBuilder;
   private UserHelper userHelper;
+  private UserValidator userValidator;
 
-  public CommentTests() throws URISyntaxException {
+  public UserTests() throws URISyntaxException {
     this.userBuilder = new UserBuilder();
     this.userHelper = new UserHelper();
+    this.userValidator = new UserValidator();
   }
 
   @Test
-  public void testCreateComments() {
+  public void testCreateUser() {
     LOG.info("CREATE USER AND RELATED DETAILS");
     final User user = this.userBuilder.buildCompleteUser();
-    this.userHelper.createUser(user);
+    final Response createUserResponse = this.userHelper.createUser(user);
 
-    LOG.info("CREATE COMMENT");
+    LOG.info("VALIDATE USER!!");
+    this.userValidator.validateUser(user, createUserResponse);
+  }
 
-    LOG.info("VALIDATE COMMENT IS PERSISTED");
+  public void testUpdateUser() {
+
   }
 
 }

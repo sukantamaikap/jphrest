@@ -4,16 +4,16 @@ import com.google.gson.annotations.SerializedName;
 import java.util.Arrays;
 
 public class GenericServer {
-  public GenericServer() {}
 
   @SerializedName("protocol")
   private String protocol;
-
   @SerializedName("host")
   private String host;
-
   @SerializedName("ports")
   private int[] ports;
+
+  public GenericServer() {
+  }
 
   public String getHost() {
     return this.host;

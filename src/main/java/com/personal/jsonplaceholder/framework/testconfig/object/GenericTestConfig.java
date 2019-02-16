@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * a null check.
  */
 public class GenericTestConfig {
+
   @SerializedName("instance")
   private String testInstance;
 
@@ -16,7 +17,8 @@ public class GenericTestConfig {
   @SerializedName("server")
   private GenericServer server;
 
-  public GenericTestConfig() {}
+  public GenericTestConfig() {
+  }
 
   public String getTestInstance() {
     return testInstance;

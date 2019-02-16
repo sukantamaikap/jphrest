@@ -7,6 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class JsonPlaceHolderHelperFactory extends BaseFacotry {
+
   private static final Logger LOG = LoggerFactory.getLogger(JsonPlaceHolderHelperFactory.class);
 
   private static JsonPlaceHolderHelperFactory instance;
@@ -24,7 +25,8 @@ public class JsonPlaceHolderHelperFactory extends BaseFacotry {
   }
 
   @Override
-  public void doHealthCheck() throws Exception {}
+  public void doHealthCheck() throws Exception {
+  }
 
   public JsonPlaceHolderHelper getPlaceHolderHelper() {
     return this.placeHolderHelper;

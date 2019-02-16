@@ -15,11 +15,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 
 public class TestConfigParser {
+
   private static final Logger LOG = LoggerFactory.getLogger(TestConfigParser.class);
   private static final String TEST_CONFIG_FILE = "TestConfig.json";
-
-  private String testDir;
   private static TestConfigParser testConfigParser;
+  private String testDir;
   private GenericTestConfig currentTestConfig;
 
   private TestConfigParser() throws IOException {
